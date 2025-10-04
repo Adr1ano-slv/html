@@ -4,9 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tabela</title>
+    <style>
+        body {
+            font-family: cursive, Helvetica, sans-serif;
+        }
+        table{
+            height: 200px;
+            width: 400px;
+            border-collapse: collapse;
+            border-top-right-radius: 100px;
+            border-top-left-radius: 100px;
+        }
+        td{
+            border: 1px solid black;
+            
+        }
+        td.c001{
+            background-color: yellow;
+        }
+        td.c002{
+            background-color: red;
+        }
+        td.c003{
+            background-color: green;
+        }
+        tr#linha4{
+            background-color:rgba(63, 59, 59, 0.082)
+        }
+    </style>
 </head>
 <body>
     <h1>Minha primeira tabela</h1>
+    <!---  hierarqia de tabelas (simples)
+        TABLE = tabela
+             TABLE row = linha de tabela
+                    TABLE HEADER = cabeçalho de tabela
+                    TABLE DATA = dado de tabela
     
+--->
+<table>
+    <tr> <!-- Primeira linha -->
+        <td class="c001">a1</td>
+        <td>b1</td>
+        <td>c1</td>
+    </tr>
+
+    <tr>
+        <td>a2</td>
+        <td class="c002">b2</td>
+        <td>c2</td>
+    </tr>
+
+    <tr>
+        <td>a3</td>
+        <td>b3</td>
+        <td class="c003">c3</td>
+    </tr>
+
+    <tr id="linha4">
+        <td>a4</td>
+        <td>b4</td>
+        <td>c4</td>
+    </tr>
+
+</table>
 </body>
 </html>
