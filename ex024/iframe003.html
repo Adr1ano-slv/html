@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste iframe</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        iframe#tela {
+            width: 90vw;
+            /* aumentar a altura para ver o conteúdo carregado */
+            height: 70vh;
+            border: 2px solid #ccc;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Faça sua escolha</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ea neque architecto saepe voluptatem minus cumque esse, tempore consectetur consequuntur nesciunt eligendi, quidem voluptatibus hic corrupti a quaerat repellendus. Voluptates!</p>
+    <ul>
+        <li><a href="paginas-extras/pagina.html" target="frame">página 1</a></li>
+        <li><a href="paginas-extras/pagina002.html" target="frame">página 2</a></li>
+        <li><a href="paginas-extras/pagina003.html" target="frame">página 3</a></li>
+    </ul>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, quidem doloremque id minima eum, vero itaque non explicabo suscipit maxime perspiciatis enim, facere culpa ullam velit veniam voluptatibus consequatur atque!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quia sunt dolorem in! Repellat temporibus reiciendis fugit! Aspernatur quod impedit, doloremque iure autem, laborum in aut earum totam voluptatibus repellendus.
+
+    </p>
+    <iframe id="tela" name="frame" src="paginas-extras/pagina.html" title="Conteúdo da página 1"> <p>Seu navegador não suporta iframes.</p>
+    </iframe>
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur exercitationem possimus debitis quaerat est temporibus dignissimos totam, numquam nulla! Error, vitae odit voluptates excepturi laudantium reprehenderit eveniet eligendi harum eaque!
+    </p>
+</body>
+</html>

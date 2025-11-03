@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>pagina002</title>
+    <style>
+        :root { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; color-scheme: light dark; }
+        body { margin: 0; padding: 2rem; line-height: 1.5; background: #f7f7f9; color: #111; }
+        header { margin-bottom: 1.5rem; }
+        .card { background: #fff; border-radius: 8px; padding: 1.25rem; box-shadow: 0 2px 8px rgba(16,24,40,0.06); max-width: 720px; }
+        footer { margin-top: 1.5rem; font-size: 0.9rem; color: #555; }
+        .btn { display:inline-block; padding: .5rem .75rem; background:#0366d6; color:#fff; border-radius:6px; text-decoration:none; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>pagina002</h1>
+    </header>
+
+    <main class="card" role="main">
+        <p>Esta é uma página inicial. Substitua o conteúdo conforme necessário.</p>
+
+        <p>
+            <button id="showQuote" class="btn" type="button">Mostrar apóstrofo</button>
+        </p>
+
+        <pre id="output" aria-live="polite" style="white-space:pre-wrap; background:#f3f4f6; padding:0.75rem; border-radius:6px;"></pre>
+    </main>
+
+    <footer>
+        <small>Criado em: <span id="now"></span></small>
+    </footer>
+
+    <script>
+        // Exemplo mínimo de interação
+        document.getElementById('now').textContent = new Date().toLocaleString();
+        document.getElementById('showQuote').addEventListener('click', function () {
+            // Mostra um apóstrofo (') dentro do elemento de saída
+            document.getElementById('output').textContent = "Apostrofo: '";
+        });
+    </script>
+</body>
+</html>
