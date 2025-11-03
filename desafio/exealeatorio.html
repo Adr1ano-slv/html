@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout Avançado com Flexbox e Grid</title>
+  <style>
+    /* ====================== RESET GLOBAL ====================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: poppins, sans-serif;
+      color: #333;
+      background-color: #f9fafc;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ====================== HEADER ====================== */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: #0d6efd;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 1.6rem;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffe066;
+    }
+
+    /* ====================== HERO SECTION ====================== */
+    .hero {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      align-items: center;
+      gap: 2rem;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, #0d6efd, #6ea8fe);
+      color: #fff;
+    }
+
+    .hero-content {
+      max-width: 600px;
+    }
+
+    .hero-content h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero-content button {
+      background: #fff;
+      color: #0d6efd;
+      border: none;
+      padding: 0.8rem 1.8rem;
+      border-radius: 50px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .hero-content button:hover {
+      background: #ffe066;
+      transform: translateY(-3px);
+    }
+
+    .hero img {
+      width: 100%;
+      border-radius: 12px;
+      object-fit: cover;
+      animation: float 4s ease-in-out infinite alternate;
+    }
+
+    @keyframes float {
+      from { transform: translateY(0); }
+      to { transform: translateY(-10px); }
+    }
+
+    /* ====================== SEÇÃO DE SERVIÇOS (GRID AVANÇADO) ====================== */
+    .services {
+      padding: 4rem 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      background: #fff;
+    }
+
+    .service-card {
+      background: #f8f9fa;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      padding: 2rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+    }
+
+    .service-card h3 {
+      color: #0d6efd;
+      margin-bottom: 1rem;
+    }
+
+    .service-card p {
+      flex: 1;
+      font-size: 1rem;
+    }
+
+    /* ====================== SEÇÃO SOBRE (GRID FLEXÍVEL) ====================== */
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 3rem;
+      padding: 4rem 2rem;
+      background: #f1f3f5;
+    }
+
+    .about img {
+      width: 100%;
+      border-radius: 16px;
+    }
+
+    .about-text h2 {
+      color: #0d6efd;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #444;
+    }
+
+    /* ====================== RODAPÉ (FLEXBOX AVANÇADO) ====================== */
+    footer {
+      background: #222;
+      color: #ddd;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+      padding: 3rem 2rem;
+    }
+
+    .footer-col {
+      flex: 1 1 250px;
+    }
+
+    .footer-col h4 {
+      color: #fff;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-col a {
+      color: #ccc;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+
+    .footer-col a:hover {
+      color: #0d6efd;
+    }
+
+    footer p {
+      text-align: center;
+      width: 100%;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+
+    /* ====================== RESPONSIVIDADE EXTRA ====================== */
+    @media (max-width: 900px) {
+      .about {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-content h2 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>FlexGrid Pro</h1>
+    <nav>
+      <a href="#">Início</a>
+      <a href="#">Serviços</a>
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Design e Tecnologia que Inspiram</h2>
+      <p>Desenvolvemos interfaces digitais fluidas e experiências otimizadas usando o poder do Flexbox e Grid Layout.</p>
+      <button>Começar Agora</button>
+    </div>
+    <img src="https://images.unsplash.com/photo-1605902711622-cfb43c4437b5?auto=format&fit=crop&w=900&q=80" alt="Interface moderna">
+  </section>
+
+  <section class="services">
+    <div class="service-card">
+      <h3>💡 Web Design</h3>
+      <p>Layouts criativos e modernos feitos sob medida para o seu negócio.</p>
+    </div>
+    <div class="service-card">
+      <h3>⚙️ Desenvolvimento</h3>
+      <p>Soluções web otimizadas com HTML5, CSS3 e JavaScript de última geração.</p>
+    </div>
+    <div class="service-card">
+      <h3>📱 Responsividade Total</h3>
+      <p>Sites adaptados a qualquer tela, do celular ao desktop.</p>
+    </div>
+    <div class="service-card">
+      <h3>🚀 Performance</h3>
+      <p>Carregamento rápido e leve, com foco na melhor experiência do usuário.</p>
+    </div>
+  </section>
+
+  <section class="about">
+    <img src="https://images.unsplash.com/photo-1603791452906-c8aff02d8f95?auto=format&fit=crop&w=900&q=80" alt="Equipe criativa">
+    <div class="about-text">
+      <h2>Sobre Nós</h2>
+      <p>Somos especialistas em front-end moderno e apaixonados por design limpo e eficiente. Usamos Flexbox e Grid Layout para construir interfaces escaláveis, otimizadas e totalmente responsivas, seguindo as melhores práticas do mercado.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-col">
+      <h4>Empresa</h4>
+      <ul>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Carreiras</a></li>
+        <li><a href="#">Parcerias</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Serviços</h4>
+      <ul>
+        <li><a href="#">Web Design</a></li>
+        <li><a href="#">Desenvolvimento</a></li>
+        <li><a href="#">Consultoria</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="#">Email</a></li>
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+
+    <p>© 2025 FlexGrid Pro — Criado com ❤️ e CSS Avançado.</p>
+  </footer>
+
+</body>
+</html>
