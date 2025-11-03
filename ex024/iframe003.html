@@ -22,6 +22,22 @@
             height: 70vh;
             border: 2px solid #ccc;
             margin-top: 20px;
+           
+        }
+
+        img {
+            width: 10px;
+            height: auto;
+            display: block;
+            margin-top: 10px;
+        }
+
+        iframe#tela.img1 {
+            width: 20px;
+            height: 20px;
+            display: block;
+            margin-top: 10px;
+            
         }
     </style>
 </head>
@@ -38,10 +54,12 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quia sunt dolorem in! Repellat temporibus reiciendis fugit! Aspernatur quod impedit, doloremque iure autem, laborum in aut earum totam voluptatibus repellendus.
 
     </p>
-    <iframe id="tela" name="frame" src="paginas-extras/pagina.html" title="Conteúdo da página 1"> <p>Seu navegador não suporta iframes.</p>
+        
+    <iframe id="tela" name="frame" srcdoc="<h2>Conteúdo da página 1</h2><p>Esta é a página 1.</p><img class='img1' src='img/snc.jpg' alt=''>" title="Conteúdo da página 1"> <p>Seu navegador não suporta iframes.</p>
     </iframe>
     <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur exercitationem possimus debitis quaerat est temporibus dignissimos totam, numquam nulla! Error, vitae odit voluptates excepturi laudantium reprehenderit eveniet eligendi harum eaque!
+        
     </p>
 </body>
 </html>
