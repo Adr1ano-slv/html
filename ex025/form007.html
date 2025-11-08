@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <h1>Exemplos de formulários</h1>
+    <form action="cadastro.php" method="get" autocapitalize="on">
+    <p>
+        <label for="iest"> estado</label>
+        <select name="estado" id="iest">
+            <option value=""select>----Escolha----</option>
+            <optgroup value="Região Nordeste">
+                 <option value="PE">Penambuco</option>
+                 <option value="PA"> Pará</option>
+            </optgroup>
+                
+            <optgroup value="Região Sudeste">
+                <option value="PR">Paraná</option>
+                <option value="MS"> Mato Grosso do Sul</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="SP">São paulo</option>
+            </optgroup>
+        </select>
+
+    </p>
+
+    <p>
+        <label for="ifrof"> Profissão: </label>
+        <input type="text" name="iprof" id="iprof" list="lsprof">
+        <option value="">Adiministrador</option>
+        <option value="">contavilista</option>
+        <option value="">progragamdor</option>
+        <option value="">Programador</option>
+        <option value="">Professor</option>
+    </p>
+
+    <p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </p>
+    </form>
+    
+</body>
+</html>
