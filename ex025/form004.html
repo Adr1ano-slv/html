@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-variant-position: normal;
+            
+            margin: 20px;
+        }
+        fieldset {
+            border: 2px solid #203a49c9;
+            padding: 20px;
+            max-width: 400px;
+            box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.253);
+            background-color: #f9f9f9;
+            background: url(img/imagem-fundo2.jpg);
+            background-size: cover;
+            border: 1px solid #203a49c9;
+            border-radius: 8px;
+        }
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #203a49c9;
+            box-shadow: inset 0 -1px -3px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            border-color: #ffffff;
+            cursor: pointer;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            margin-right: 10px;  
+            border: 2px solid white;
+        }
+
+        input[type="reset"] {
+            background-color: #f44336;
+            color: white;
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Teste de formulário</h1>
+    <fieldset>
+        <form action="cadastro.php" method="post">
+            <legend>Dados Pessoais</legend>
+
+            <p>
+                <label for="iname">nome</label>
+                <input type="text" id="iname" name="nome" required maxlength="30" size="30" placeholder="Digite seu nome" autocomplete="name" autocapitalize="words">
+            </p>
+        
+            <p>
+                <label for="iemail"> email</label>
+                <input type="email" id="iemail" name="email" autocomplete="email" autocapitalize="email" placeholder="Seu melhor email" >
+            </p>
+            <p>
+                <label for="itel">Telefone</label>
+                <input type="tel" id="itel" name="telefone" autocomplete="tel"  pattern="^\d{2}-\d{4,5}-\d{4}$" placeholder="(xx) xxxxx-xxxx" required>
+            </p>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+        </form>
+    </fieldset>
+</body>
+</html>
