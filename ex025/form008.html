@@ -7,14 +7,25 @@
 </head>
 <body>
     <h1>Exemplos de Formulário</h1>
+    <form action="cadastro.php" method="get" autocomplete="off">
+        <p>
+            <label for="In1">Numero1</label>
+            <input type="number" name="n1" id="in1" mmin="0" max="50" required oninput="isoma.innerHTML=Number(in1.value) + Number(in2.value)">
+            
+        </p>
 
+        <p>
+            <label for="in2"> Numero2   </label>
+            <input type="number" name="n2" id="in2" min="o" max="50" required oninput="isoma.innerHTML=Number(in1.value) + Number(in2.value)">
+        </p>
+            <label for="isoma">Soma:</label>
+            <output name="soma" id="isoma">0</output>
+    
 
-
-
-
-    <p>
-        <input type="submit" value="Enviar">
-        <input type="reset" value="limpar">
-    </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="limpar">
+        </p>
+    </form>
 </body>
 </html>
