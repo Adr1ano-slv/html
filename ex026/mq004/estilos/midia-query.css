@@ -12,10 +12,16 @@ grandes Telas: acima de 1200*/
         font-family: 'Courier New', Courier, monospace;
 
     }
-    
+
+
     body {
         background-image: url(../imagens/back-print.jpg);/* DESNECESSÁRIO*/
     }
+    img#phone { display: none; }
+    img#print { display: block; }
+    img#tablet { display: none; }
+    img#pc { display: none; }
+    img#tv { display:none; }
 
     main {
         border: 2px solid black;
@@ -55,5 +61,10 @@ grandes Telas: acima de 1200*/
     body {
         background-image: url(../imagens/back-tv.jpg);
     }
+    img#phone { display: none; }
+    img#print { display: none; }
+    img#tablet { display: none; }
+    img#pc { display: none; }
+    img#tv { display:block; }
     
 }
