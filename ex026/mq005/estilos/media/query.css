@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+/*typical devicec brack potints
+----------------------------------pequena telas: até600px
+Celulares: de 600 até 992
+grandes Telas:acima de 1200*/
+
+@media screen and (min-width:768){
+    i#burguer{
+        display: none;
+    }
+
+    menu{
+        display:block
+    }
+    menu > ul > li >
+    display:
+    
+}
+
+@media screen and ( min-width) {
+    
+}
