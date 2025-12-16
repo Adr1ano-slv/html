@@ -8,21 +8,7 @@
         div.container {
             background-color: lightsalmon;
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            height: 50vh;
-            padding: 10px;
-            border: 2px solid rgb(0, 0, 0);
-            width: 80%;
-            margin: auto;
-            box-shadow: 5px 5px 10px rgb(0, 0, 0);
-            border-radius: 15px 15px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: bold;
-            color: rgb(27, 139, 173);
-            font-size: 25pt;
-            text-align: center;         
+          
             
             
 
@@ -30,27 +16,41 @@
         }
 
         div.item {
-            background-color: lightblue;
-            border: 1px solid rgb(0, 0, 12);
-            text-align: center;
-            flex: auto;
-            margin: 5px;
-            font-size: 20pt;
-            padding: 10px;
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: bold;
-            color: rgb(27, 139, 173);
-            box-shadow: 3px 3px 7px rgb(0, 0, 0);
-            border-radius: 10px 10px;
-            min-width: 100px;
-            max-width: 150px;
-            height: 50px;
-            line-height: 50px;
-            
+         background-color: lightblue;
+         margin: 5px;
+        }
+        div.container1 {
+            background-color: lightgreen;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 200px;
+
+        }
+
+        div.container2 {
+            background-color: lightgray;
+            display: flex;
+            flex-direction: row-reverse;
+          
+
+        }
+
+        div.container3 {
+            background-color: rgba(36, 24, 63, 0.603);
+            display: flex;
+            flex-direction: column-reverse;
+            height: 400px;
+            width: 200px;
+
         }
     </style>
 </head>
 <body>
+    <h1>eixos (axis)</h1>
+    <p>aqui isso está na direção padão
+        flex-direction: row;
+    </p>
     <div class="container">
 
     
@@ -62,5 +62,44 @@
     <div class="item">F</div>
     <div class="item">G</div>
     </div>
+    <p>esse aqui já está na 
+        flex-direction: row-reverse;   </p>
+           <div class="container2">
+
+    
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
+    <div class="item">D</div>
+    <div class="item">E</div>
+    <div class="item">F</div>
+    <div class="item">G</div>
+    </div>
+
+    <p>esse aqui já está na 
+        flex-direction: column-reverse   </p>
+        <div class="container3"> 
+   
+            <div class="item">A</div>
+            <div class="item">B</div>    
+            <div class="item">C</div> 
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">F</div>
+            <div class="item">G</div>
+        </div>
+
+    <p>esse aqui já está na 
+        flex-direction: column;   </p>
+        <div class="container1"> 
+   
+            <div class="item">A</div>
+            <div class="item">B</div>    
+            <div class="item">C</div> 
+            <div class="item">D</div>
+            <div class="item">E</div>
+            <div class="item">F</div>
+            <div class="item">G</div>
+        </div>
 </body>
 </html>
