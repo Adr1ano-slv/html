@@ -6,20 +6,25 @@
     <title>FlexBox</title>
     <style>
         div.container {
-            flex: content;
             background-color: lightsalmon;
             display: flex;
-            flex-flow: row nowrap;
+            flex-wrap: row nowrap;
+
+            
+            
+            
+
 
         }
 
         div.item {
             background-color: lightblue;
             border: 1px solid rgb(0, 0, 12);
-            flex-basis: 550px;
-
-           flex:auto
-         
+            flex-basis: 550px;  
+            flex-shrink: 1;
+            flex-grow: 0;
+            
+           
             
         }
     </style>
@@ -27,14 +32,11 @@
 <body>
     <div class="container">
 
+
     
-    <div class="item">caixa pequena</div>
-    <div class="item">caixa média</div>
-    <div class="item">caixa grande</div>
-    <div class="item">caixa extra grande</div>
-    <div class="item">caixa enorme</div>
-    <div class="item">caixa gigante</div>
-    <div class="item">G</div>
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">C</div>
     </div>
 </body>
 </html>
